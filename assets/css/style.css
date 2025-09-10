@@ -9,3 +9,13 @@ html {
     padding: 0;
 }
 
+:root {
+    --text-color: #fff;
+    --background-color: gray;
+    --hover-text: indigo;
+}
+
+body{
+    font-family: poppins, sans-serif;
+}
+
