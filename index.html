@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pirans - Tariff Website</title>
+  <!-- Tailwind css -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome CDN --> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-gray-900 text-white font-sans scroll-smooth">
+
+  <!-- Navbar -->
+  <nav class="fixed top-0 left-0 w-full bg-gray-900 shadow-lg z-50">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <!-- Logo -->
+      <div class="flex items-center space-x-2">
+        <img src="assets/img/logo.png" alt="Pirans Logo" class="w-10 h-10">
+        <span class="text-2xl font-bold text-indigo-500">Pirans</span>
+      </div>
+
+      <!-- Menu (Desktop) -->
+      <div class="hidden md:flex space-x-8 text-gray-300 font-medium">
+        <a href="#hero" class="hover:text-indigo-400 transition">Home</a>
+        <a href="#about" class="hover:text-indigo-400 transition">About</a>
+        <a href="#team" class="hover:text-indigo-400 transition">Team</a>
+        <a href="#plans" class="hover:text-indigo-400 transition">Plans</a>
+        <a href="#testimonials" class="hover:text-indigo-400 transition">Testimonials</a>
+        <a href="#contact" class="hover:text-indigo-400 transition">Contact</a>
+      </div>
+
+      <!-- Auth Buttons (Desktop) -->
+      <div class="hidden md:flex space-x-4">
+        <a href="#" class="px-4 py-2 border border-indigo-500 text-indigo-500 rounded-lg hover:bg-indigo-500 hover:text-white transition">Login</a>
+        <a href="#" class="px-4 py-2 bg-indigo-600 rounded-lg hover:bg-indigo-700 transition">Signup</a>
+      </div>
+
+      <!-- Hamburger (Mobile) -->
+      <button class="md:hidden text-gray-300 focus:outline-none" onclick="toggleMenu()">
+        ☰
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden bg-gray-800 md:hidden flex flex-col items-center space-y-6 py-8">
+      <a href="#hero" class="block text-lg hover:text-indigo-400 transition">Home</a>
+      <a href="#about" class="block text-lg hover:text-indigo-400 transition">About</a>
+      <a href="#team" class="block text-lg hover:text-indigo-400 transition">Team</a>
+      <a href="#plans" class="block text-lg hover:text-indigo-400 transition">Plans</a>
+      <a href="#testimonials" class="block text-lg hover:text-indigo-400 transition">Testimonials</a>
+      <a href="#contact" class="block text-lg hover:text-indigo-400 transition">Contact</a>
+
+      <!-- Mobile Auth Buttons -->
+      <div class="flex flex-col w-full px-6 space-y-4 mt-6">
+        <a href="#" class="w-full text-center px-4 py-2 border border-indigo-500 text-indigo-500 rounded-lg hover:bg-indigo-500 hover:text-white transition">Login</a>
+        <a href="#" class="w-full text-center px-4 py-2 bg-indigo-600 rounded-lg hover:bg-indigo-700 transition">Signup</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <!-- Hero Section -->
+<section id="hero" class="h-screen flex flex-col md:flex-row items-center justify-center bg-gradient-to-r from-indigo-600 to-purple-600 pt-24 px-8">
+  
+  <!-- Left Content -->
+  <div class="flex-1 text-center md:text-left space-y-6">
+    <h1 class="text-4xl md:text-6xl font-extrabold text-white animate-fadeIn">
+      Welcome to <span class="text-yellow-300">Pirans</span>
+    </h1>
+    <p id="heroText" class="text-xl md:text-2xl text-gray-100"></p>
+    <a href="#about" class="inline-block mt-4 px-6 py-3 bg-white text-indigo-700 font-bold rounded-lg shadow-lg hover:scale-105 transition">
+      Learn More
+    </a>
+  </div>
+
+  <!-- Right Image -->
+  <div class="flex-1 mt-10 md:mt-0 flex justify-center">
+    <img src="https://source.unsplash.com/600x500/?technology,business" 
+        alt="Hero Image" 
+        class="rounded-2xl shadow-2xl transform hover:scale-105 transition duration-500">
+  </div>
+
+</section>
+
+  <!-- Sections -->
+  <section id="about" class="py-20 px-6 md:px-20 bg-gray-800 text-center">
+    <h2 class="text-4xl font-bold mb-8">About Us</h2>
+    <p class="max-w-3xl mx-auto text-gray-300 leading-relaxed">
+      At <span class="font-semibold text-indigo-400">Pirans</span>, we believe in providing transparent and flexible tariff plans that
+      empower individuals, professionals, and businesses.
+    </p>
+  </section>
+
+  <section id="team" class="py-20 px-6 md:px-20 bg-gray-900 text-center">
+    <h2 class="text-4xl font-bold mb-12">Meet the Officials</h2>
+    <div class="grid md:grid-cols-3 gap-12">
+      <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:scale-105 transform transition">
+        <img src="assets/img/ceo.jpg" alt="CEO" class="w-40 h-40 mx-auto rounded-full mb-6 object-cover">
+        <h3 class="text-2xl font-semibold">John Doe</h3>
+        <p class="text-indigo-400 mb-2">Chief Executive Officer</p>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:scale-105 transform transition">
+        <img src="assets/img/manager.jpg" alt="Manager" class="w-40 h-40 mx-auto rounded-full mb-6 object-cover">
+        <h3 class="text-2xl font-semibold">Jane Smith</h3>
+        <p class="text-indigo-400 mb-2">Operations Manager</p>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:scale-105 transform transition">
+        <img src="assets/img/techlead.jpg" alt="Tech Lead" class="w-40 h-40 mx-auto rounded-full mb-6 object-cover">
+        <h3 class="text-2xl font-semibold">Michael Lee</h3>
+        <p class="text-indigo-400 mb-2">Technology Lead</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Plans Section -->
+  <section id="plans" class="py-20 px-6 md:px-20 bg-gray-800">
+    <h2 class="text-4xl font-bold text-center mb-12">Choose Your Plan</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      <!-- Plan 1 -->
+      <div class="bg-gray-700 rounded-xl shadow-lg p-8 transform hover:scale-105 transition duration-300">
+        <h3 class="text-2xl font-semibold mb-4">Basic</h3>
+        <p class="text-gray-300 mb-6">For individuals starting out</p>
+        <p class="text-4xl font-bold mb-6">$9<span class="text-lg">/mo</span></p>
+        <ul class="mb-6 space-y-2 text-gray-300">
+          <li>✔ 10 GB Storage</li>
+          <li>✔ 24/7 Support</li>
+          <li>✔ Secure Access</li>
+        </ul>
+        <button class="w-full bg-indigo-600 py-3 rounded-lg hover:bg-indigo-700 transition">Choose</button>
+      </div>
+
+      <!-- Plan 2 -->
+      <div class="bg-gradient-to-r from-purple-600 to-indigo-600 rounded-xl shadow-xl p-8 transform hover:scale-105 transition duration-300">
+        <h3 class="text-2xl font-semibold mb-4">Pro</h3>
+        <p class="text-gray-100 mb-6">For professionals who need more</p>
+        <p class="text-4xl font-bold mb-6">$29<span class="text-lg">/mo</span></p>
+        <ul class="mb-6 space-y-2 text-gray-100">
+          <li>✔ 100 GB Storage</li>
+          <li>✔ Priority Support</li>
+          <li>✔ Advanced Features</li>
+        </ul>
+        <button class="w-full bg-white text-indigo-700 py-3 rounded-lg hover:bg-gray-200 transition">Choose</button>
+      </div>
+
+      <!-- Plan 3 -->
+      <div class="bg-gray-700 rounded-xl shadow-lg p-8 transform hover:scale-105 transition duration-300">
+        <h3 class="text-2xl font-semibold mb-4">Enterprise</h3>
+        <p class="text-gray-300 mb-6">For companies with large needs</p>
+        <p class="text-4xl font-bold mb-6">$99<span class="text-lg">/mo</span></p>
+        <ul class="mb-6 space-y-2 text-gray-300">
+          <li>✔ Unlimited Storage</li>
+          <li>✔ Dedicated Manager</li>
+          <li>✔ Custom Solutions</li>
+        </ul>
+        <button class="w-full bg-indigo-600 py-3 rounded-lg hover:bg-indigo-700 transition">Choose</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="py-20 px-6 md:px-20 bg-gray-900 text-center">
+    <h2 class="text-4xl font-bold mb-12">What Our Clients Say</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-gray-800 p-8 rounded-xl shadow-lg">
+        <p class="text-gray-300 italic mb-4">"Pirans made it so easy to choose a plan. The interface is modern and smooth!"</p>
+        <h4 class="font-semibold text-indigo-400">– Sarah W.</h4>
+      </div>
+      <div class="bg-gray-800 p-8 rounded-xl shadow-lg">
+        <p class="text-gray-300 italic mb-4">"I love the transparency and design. The animations make the experience fun."</p>
+        <h4 class="font-semibold text-indigo-400">– James L.</h4>
+      </div>
+      <div class="bg-gray-800 p-8 rounded-xl shadow-lg">
+        <p class="text-gray-300 italic mb-4">"Our company uses the enterprise plan and it’s been a game-changer!"</p>
+        <h4 class="font-semibold text-indigo-400">– Maria R.</h4>
+      </div>
+    </div>
+  </section>
+
+<!-- Contact Section -->
+<section id="contact" class="py-20 px-6 md:px-20 bg-gray-800 text-center">
+  <h2 class="text-4xl font-bold mb-12">Contact Us</h2>
+
+  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+    <!-- Email Card -->
+    <div class="bg-gray-900 p-8 rounded-xl shadow-lg hover:scale-105 transform transition">
+      <div class="text-indigo-500 text-4xl mb-4">
+        <i class="fas fa-envelope"></i>
+      </div>
+      <h3 class="text-xl font-semibold mb-2">Email</h3>
+      <p class="text-gray-400">support@pirans.com</p>
+    </div>
+
+    <!-- Phone Card -->
+    <div class="bg-gray-900 p-8 rounded-xl shadow-lg hover:scale-105 transform transition">
+      <div class="text-indigo-500 text-4xl mb-4">
+        <i class="fas fa-phone"></i>
+      </div>
+      <h3 class="text-xl font-semibold mb-2">Phone</h3>
+      <p class="text-gray-400">+1 (555) 123-4567</p>
+    </div>
+
+    <!-- Address Card -->
+    <div class="bg-gray-900 p-8 rounded-xl shadow-lg hover:scale-105 transform transition">
+      <div class="text-indigo-500 text-4xl mb-4">
+        <i class="fas fa-map-marker-alt"></i>
+      </div>
+      <h3 class="text-xl font-semibold mb-2">Address</h3>
+      <p class="text-gray-400">123 Business St, New York, USA</p>
+    </div>
+
+    <!-- Opening Hours Card -->
+    <div class="bg-gray-900 p-8 rounded-xl shadow-lg hover:scale-105 transform transition">
+      <div class="text-indigo-500 text-4xl mb-4">
+        <i class="fas fa-clock"></i>
+      </div>
+      <h3 class="text-xl font-semibold mb-2">Opening Hours</h3>
+      <p class="text-gray-400">Mon - Fri: 9:00 AM - 6:00 PM</p>
+      <p class="text-gray-400">Sat - Sun: Closed</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-gray-300 pt-16 pb-8 px-6 md:px-20">
+  <div class="grid md:grid-cols-3 gap-12 mb-12">
+
+    <!-- Contact Info -->
+    <div>
+      <h3 class="text-xl font-semibold mb-4 text-white">Contact Us</h3>
+      <p class="flex items-center space-x-2 mb-2">
+        <i class="fas fa-envelope text-indigo-500"></i>
+        <span>support@pirans.com</span>
+      </p>
+      <p class="flex items-center space-x-2 mb-2">
+        <i class="fas fa-phone text-indigo-500"></i>
+        <span>+1 (555) 123-4567</span>
+      </p>
+      <p class="flex items-center space-x-2 mb-2">
+        <i class="fas fa-map-marker-alt text-indigo-500"></i>
+        <span>123 Business St, New York, USA</span>
+      </p>
+    </div>
+
+    <!-- Social Media -->
+    <div>
+      <h3 class="text-xl font-semibold mb-4 text-white">Follow Us</h3>
+      <div class="flex space-x-4">
+        <a href="#" class="text-gray-400 hover:text-indigo-500 transition text-2xl">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="#" class="text-gray-400 hover:text-indigo-500 transition text-2xl">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="#" class="text-gray-400 hover:text-indigo-500 transition text-2xl">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="#" class="text-gray-400 hover:text-indigo-500 transition text-2xl">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Opening Hours -->
+    <div>
+      <h3 class="text-xl font-semibold mb-4 text-white">Opening Hours</h3>
+      <p>Mon - Fri: 9:00 AM - 6:00 PM</p>
+      <p>Sat - Sun: Closed</p>
+    </div>
+  </div>
+
+  <!-- Divider -->
+  <div class="border-t border-gray-700 pt-6 text-center">
+    <p class="text-sm">&copy; 2025 <span class="text-indigo-500 font-semibold">Pirans</span>. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
