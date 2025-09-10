@@ -6,9 +6,9 @@ function toggleMenu() {
   document.addEventListener("DOMContentLoaded", function () {
     const textElement = document.getElementById("heroText");
     const texts = [
-      "Modern Tariff Plans with Style ✨",
+      "Modern Tariff Plans with Style.",
       "Transparent. Flexible. Reliable.",
-      "Powering the Future of Smart Billing ⚡"
+      "Powering the Future of Smart Billing."
     ];
     let textIndex = 0;
     let charIndex = 0;
