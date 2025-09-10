@@ -2,20 +2,31 @@
 html {
     scroll-behavior: smooth;
 }
-
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-
 :root {
     --text-color: #fff;
     --background-color: gray;
     --hover-text: indigo;
+    --black:#000;
 }
-
 body{
     font-family: poppins, sans-serif;
 }
-
+i{
+    color: rgb(231, 231, 0);
+}
+#services, #contact, #about{
+    background-color: var(--text-color);
+}
+#services .text-4xl,
+#contact .text-4xl,
+#about .text-4xl{
+    color: var(--black);
+}
+footer{
+    background-color: var(--black);
+}
