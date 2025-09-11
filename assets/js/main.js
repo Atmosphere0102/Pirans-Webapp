@@ -1,7 +1,19 @@
 function toggleMenu() {
-    document.getElementById("mobileMenu").classList.toggle("hidden");
-  }
-  
+  document.getElementById("mobileMenu").classList.toggle("hidden");
+}
+
+// Close menu when a link is clicked
+document.addEventListener("DOMContentLoaded", () => {
+  const mobileMenu = document.getElementById("mobileMenu");
+  const links = mobileMenu.querySelectorAll("a");
+
+  links.forEach(link => {
+    link.addEventListener("click", () => {
+      mobileMenu.classList.add("hidden");
+    });
+  });
+});
+
   // Typing Animation for Hero Section
   document.addEventListener("DOMContentLoaded", function () {
     const textElement = document.getElementById("heroText");
@@ -38,5 +50,41 @@ function toggleMenu() {
     }
   
     typeEffect();
+  });
+  
+  // Testimonial scroll animation 
+  document.addEventListener("DOMContentLoaded", function () {
+    const slider = document.getElementById("testimonialSlider");
+    let scrollAmount = 0;
+  
+    function autoScroll() {
+      if (scrollAmount >= slider.scrollWidth - slider.clientWidth) {
+        scrollAmount = 0; // reset scroll
+      } else {
+        scrollAmount += 320; // move by card width
+      }
+      slider.style.transform = `translateX(-${scrollAmount}px)`;
+    }
+  
+    setInterval(autoScroll, 3000); // scroll every 3s
+  });  
+
+  // scroll reveal 
+  document.addEventListener("DOMContentLoaded", () => {
+    const services = document.querySelectorAll(".service");
+  
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+          // Uncomment if you want animation only once:
+          // observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+  
+    services.forEach(service => {
+      observer.observe(service);
+    });
   });
   

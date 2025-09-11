@@ -13,8 +13,12 @@ html {
     --hover-text: indigo;
     --black:#000;
 }
-body{
-    font-family: poppins, sans-serif;
+body {
+    font-family: 'Poppins', sans-serif;
+  }
+.flex-1 img{
+    height: 590px;
+    width: 850px;
 }
 i{
     color: rgb(231, 231, 0);
@@ -29,4 +33,23 @@ i{
 }
 footer{
     background-color: var(--black);
+}
+/* Animation  */
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+    }
+    .animate-scroll {
+    display: flex;
+    width: max-content;
+    animation: scroll 25s linear infinite;
+    }
+.service {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease-out;
+}
+.service.show {
+    opacity: 1;
+    transform: translateY(0);
 }

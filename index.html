@@ -4,6 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pirans - Tariff Website</title>
+  <!-- google font import -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <!-- Tailwind css -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Font Awesome CDN --> 
@@ -26,7 +28,7 @@
         <a href="#hero" class="hover:text-indigo-400 transition">Home</a>
         <a href="#about" class="hover:text-indigo-400 transition">About</a>
         <a href="#team" class="hover:text-indigo-400 transition">Team</a>
-        <a href="#plans" class="hover:text-indigo-400 transition">Plans</a>
+        <a href="#services" class="hover:text-indigo-400 transition">services</a>
         <a href="#testimonials" class="hover:text-indigo-400 transition">Testimonials</a>
         <a href="#contact" class="hover:text-indigo-400 transition">Contact</a>
       </div>
@@ -48,7 +50,7 @@
       <a href="#hero" class="block text-lg hover:text-indigo-400 transition">Home</a>
       <a href="#about" class="block text-lg hover:text-indigo-400 transition">About</a>
       <a href="#team" class="block text-lg hover:text-indigo-400 transition">Team</a>
-      <a href="#plans" class="block text-lg hover:text-indigo-400 transition">Plans</a>
+      <a href="#services" class="block text-lg hover:text-indigo-400 transition">services</a>
       <a href="#testimonials" class="block text-lg hover:text-indigo-400 transition">Testimonials</a>
       <a href="#contact" class="block text-lg hover:text-indigo-400 transition">Contact</a>
 
@@ -61,25 +63,30 @@
   </nav>
 
 <!-- Hero Section -->
-<section id="hero" class="h-screen flex flex-col md:flex-row items-center justify-center bg-gradient-to-r from-indigo-600 to-purple-600 pt-24 px-8">
-  <!-- Left Content -->
-  <div class="flex-1 text-center md:text-left space-y-6">
-    <h1 class="text-4xl md:text-6xl font-extrabold text-white">
-      Enabeling your parth to <span class="text-yellow-300">Financial Growth</span> and success!!
-    </h1>
-    <p id="heroText" class="text-xl md:text-2xl text-gray-100 h-8"></p>
-    <a href="#about" class="inline-block mt-4 px-6 py-3 bg-white text-indigo-700 font-bold rounded-lg shadow-lg hover:scale-105 transition">
-      Learn More
-    </a>
+<section id="hero" class="relative h-screen flex items-center bg-gray-900">
+  <!-- Background Image -->
+  <div class="absolute inset-0">
+    <img src="assets/img/hero1.jpg" alt="Hero Background" class="w-full h-full object-cover">
+    <!-- Overlay -->
+    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
   </div>
-  <!-- Right Image -->
-  <div class="flex-1 mt-10 md:mt-0 flex justify-center">
-    <img src="assets/img/hero.png" 
-        alt="Hero Image" 
-        class="w-full max-w-3xl lg:max-w-3xl transform hover:scale-105 transition duration-500">
-  </div>
-  
 
+  <!-- Content -->
+  <div class="relative z-10 max-w-3xl px-8 md:px-20">
+    <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-6">
+      Enabling your path to <span class="text-yellow-300">Financial Growth</span> and Success!!
+    </h1>
+    <p id="heroText" class="text-lg md:text-2xl text-gray-200 mb-10 leading-relaxed"></p>
+    
+    <div class="space-x-4">
+      <a href="#about" class="inline-block px-6 py-3 bg-indigo-600 text-white font-bold rounded-lg shadow-lg hover:bg-indigo-700 transition">
+        Learn More
+      </a>
+      <a href="#services" class="inline-block px-6 py-3 bg-white text-indigo-700 font-bold rounded-lg shadow-lg hover:scale-105 transition">
+        Get Started
+      </a>
+    </div>
+  </div>
 </section>
 
 <!-- About Us Section -->
@@ -114,89 +121,181 @@
 </section>
 
 
-  <section id="team" class="py-20 px-6 md:px-20 bg-gray-900 text-center">
-    <h2 class="text-4xl font-bold mb-12">Meet the Officials</h2>
-    <div class="grid md:grid-cols-3 gap-12">
-      <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:scale-105 transform transition">
-        <img src="assets/img/ceo.jpg" alt="CEO" class="w-40 h-40 mx-auto rounded-full mb-6 object-cover">
-        <h3 class="text-2xl font-semibold">Temitope Marvelous</h3>
-        <p class="text-indigo-400 mb-2">Chief Executive Officer</p>
+<section id="team" class="py-20 px-6 md:px-20 bg-gray-900 text-center">
+  <h2 class="text-4xl font-bold mb-12 text-white">Meet the Officials</h2>
+  
+  <div class="grid md:grid-cols-3 gap-12 group">
+    
+    <!-- Official Card -->
+    <div class="bg-white p-6 rounded-xl shadow-lg transform transition duration-500 group-hover:scale-95 hover:scale-105">
+      <div class="overflow-hidden rounded-lg">
+        <img src="assets/img/team 3.jpg" alt="CEO" class="w-full h-72 object-cover rounded-lg transform transition duration-500 hover:scale-110">
       </div>
-      <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:scale-105 transform transition">
-        <img src="assets/img/manager.jpg" alt="Manager" class="w-40 h-40 mx-auto rounded-full mb-6 object-cover">
-        <h3 class="text-2xl font-semibold">Emmanuel Monday</h3>
-        <p class="text-indigo-400 mb-2">Operations Manager</p>
+      <h3 class="text-2xl font-semibold mt-6 text-gray-900">Temitope Marvelous</h3>
+      <p class="text-indigo-600">Chief Executive Officer</p>
+    </div>
+
+    <!-- Official Card -->
+    <div class="bg-white p-6 rounded-xl shadow-lg transform transition duration-500 group-hover:scale-95 hover:scale-105">
+      <div class="overflow-hidden rounded-lg">
+        <img src="assets/img/team 4.jpg" alt="Manager" class="w-full h-72 object-cover rounded-lg transform transition duration-500 hover:scale-110">
       </div>
-      <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:scale-105 transform transition">
-        <img src="assets/img/techlead.jpg" alt="Tech Lead" class="w-40 h-40 mx-auto rounded-full mb-6 object-cover">
-        <h3 class="text-2xl font-semibold">Olamide Jonson</h3>
-        <p class="text-indigo-400 mb-2">Technology Lead</p>
+      <h3 class="text-2xl font-semibold mt-6 text-gray-900">Emmanuel Monday</h3>
+      <p class="text-indigo-600">Operations Manager</p>
+    </div>
+
+    <!-- Official Card -->
+    <div class="bg-white p-6 rounded-xl shadow-lg transform transition duration-500 group-hover:scale-95 hover:scale-105">
+      <div class="overflow-hidden rounded-lg">
+        <img src="assets/img/team1.jpg" alt="Tech Lead" class="w-full h-72 object-cover rounded-lg transform transition duration-500 hover:scale-110">
       </div>
-    </div>
-  </section>
-
-<!-- Services Section -->
-<section id="services" class="py-20 px-6 md:px-20 bg-white-900 text-center">
-  <h2 class="text-4xl font-bold mb-12 text-gray">Our Services</h2>
-
-  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-    <!-- Service Card -->
-    <div class="bg-indigo-800 p-8 rounded-xl shadow-lg hover:scale-105 hover:shadow-2xl transition transform duration-300">
-      <img src="assets/img/personal-loan.png" alt="Personal Loans" class="w-20 h-20 mx-auto mb-6 rounded-full object-cover shadow-md">
-      <h3 class="text-2xl font-semibold mb-3 text-white">Personal Loans</h3>
-      <p class="text-gray-400">Flexible personal loans to meet your immediate financial needs, from medical expenses to education.</p>
-    </div>
-
-    <div class="bg-indigo-800 p-8 rounded-xl shadow-lg hover:scale-105 hover:shadow-2xl transition transform duration-300">
-      <img src="assets/img/business-loan.png" alt="Business Loans" class="w-20 h-20 mx-auto mb-6 rounded-full object-cover shadow-md">
-      <h3 class="text-2xl font-semibold mb-3 text-white">Business Loans</h3>
-      <p class="text-gray-400">Fuel your business growth with customized loans for expansion, working capital, and equipment.</p>
-    </div>
-
-    <div class="bg-indigo-800 p-8 rounded-xl shadow-lg hover:scale-105 hover:shadow-2xl transition transform duration-300">
-      <img src="assets/img/micro-finance.png" alt="Microfinance" class="w-20 h-20 mx-auto mb-6 rounded-full object-cover shadow-md">
-      <h3 class="text-2xl font-semibold mb-3 text-white">Microfinance Solutions</h3>
-      <p class="text-gray-400">Affordable microfinance loans to empower small businesses and startups, driving growth and success.</p>
-    </div>
-
-    <div class="bg-indigo-800 p-8 rounded-xl shadow-lg hover:scale-105 hover:shadow-2xl transition transform duration-300">
-      <img src="assets/img/loan-restructure.png" alt="Loan Restructuring" class="w-20 h-20 mx-auto mb-6 rounded-full object-cover shadow-md">
-      <h3 class="text-2xl font-semibold mb-3 text-white">Loan Restructuring</h3>
-      <p class="text-gray-400">Ease your financial burden with flexible restructuring options designed to support repayment.</p>
-    </div>
-
-    <div class="bg-indigo-800 p-8 rounded-xl shadow-lg hover:scale-105 hover:shadow-2xl transition transform duration-300">
-      <img src="assets/img/investment-advisory.png" alt="Investment Advisory" class="w-20 h-20 mx-auto mb-6 rounded-full object-cover shadow-md">
-      <h3 class="text-2xl font-semibold mb-3 text-white">Investment Advisory</h3>
-      <p class="text-gray-400">Maximize your wealth potential with personalized investment strategies tailored to your goals.</p>
-    </div>
-
-    <div class="bg-indigo-800 p-8 rounded-xl shadow-lg hover:scale-105 hover:shadow-2xl transition transform duration-300">
-      <img src="assets/img/insurance-assistance.png" alt="Insurance Assistance" class="w-20 h-20 mx-auto mb-6 rounded-full object-cover shadow-md">
-      <h3 class="text-2xl font-semibold mb-3 text-white">Insurance Assistance</h3>
-      <p class="text-gray-400">Protect your assets and loved ones with access to trusted insurance providers and tailored plans.</p>
+      <h3 class="text-2xl font-semibold mt-6 text-gray-900">Olamide Jonson</h3>
+      <p class="text-indigo-600">Technology Lead</p>
     </div>
   </div>
 </section>
 
-  <!-- Testimonials Section -->
-  <section id="testimonials" class="py-20 px-6 md:px-20 bg-gray-900 text-center">
-    <h2 class="text-4xl font-bold mb-12">What Our Clients Say</h2>
-    <div class="grid md:grid-cols-3 gap-8">
-      <div class="bg-gray-800 p-8 rounded-xl shadow-lg">
-        <p class="text-gray-300 italic mb-4">"Pirans made it so easy to choose a plan. The interface is modern and smooth!"</p>
-        <h4 class="font-semibold text-indigo-400">– Temitope Marvelous.</h4>
-      </div>
-      <div class="bg-gray-800 p-8 rounded-xl shadow-lg">
-        <p class="text-gray-300 italic mb-4">"I love the transparency and design. The animations make the experience fun."</p>
-        <h4 class="font-semibold text-indigo-400">– Olamide Jonson.</h4>
-      </div>
-      <div class="bg-gray-800 p-8 rounded-xl shadow-lg">
-        <p class="text-gray-300 italic mb-4">"Our company uses the enterprise plan and it’s been a game-changer!"</p>
-        <h4 class="font-semibold text-indigo-400">– Dorcas Isaac.</h4>
+
+<!-- Services Section -->
+<section id="services" class="py-20 px-6 md:px-20 bg-gray-50">
+  <h2 class="text-4xl font-bold mb-16 text-gray-900 text-center">Our Services</h2>
+
+  <div class="space-y-20">
+
+    <!-- Service 1 -->
+    <div class="service flex flex-col md:flex-row items-center gap-10">
+      <img src="assets/img/pl.jpg" alt="Personal Loans" class="w-full md:w-1/2 rounded-lg shadow-2xl">
+      <div class="md:w-1/2 text-left">
+        <h3 class="text-3xl font-semibold mb-4 text-indigo-700">Personal Loans</h3>
+        <p class="text-gray-600 leading-relaxed">
+          Get quick access to flexible personal loans designed to cover your most important needs whether it’s medical expenses, 
+          education, home improvements, or unexpected emergencies. Our loans come with competitive interest rates, simple repayment plans, 
+          and no hidden charges, giving you peace of mind and financial freedom.
+        </p>
       </div>
     </div>
-  </section>
+
+    <!-- Service 2 -->
+    <div class="service flex flex-col md:flex-row items-center gap-10 md:flex-row-reverse">
+      <img src="assets/img/bl.jpg" alt="Business Loans" class="w-full md:w-1/2 rounded-lg shadow-2xl">
+      <div class="md:w-1/2 text-left">
+        <h3 class="text-3xl font-semibold mb-4 text-indigo-700">Business Loans</h3>
+        <p class="text-gray-600 leading-relaxed">
+          FEmpower your business with customized loan solutions tailored to your goals. 
+          Whether you need capital for expansion, new equipment, inventory, or managing day-to-day operations, 
+          our business loans provide the financial boost you need. With flexible repayment options, quick approval processes,
+          and competitive interest rates, we’re here to help you scale confidently and achieve long-term success.
+        </p>
+      </div>
+    </div>
+
+    <!-- Service 3 -->
+    <div class="service flex flex-col md:flex-row items-center gap-10">
+      <img src="assets/img/ms.jpg" alt="Microfinance Solutions" class="w-full md:w-1/2 rounded-lg shadow-2xl">
+      <div class="md:w-1/2 text-left">
+        <h3 class="text-3xl font-semibold mb-4 text-indigo-700">Microfinance Solutions</h3>
+        <p class="text-gray-600 leading-relaxed">
+          Support your entrepreneurial journey with affordable microfinance loans designed for small businesses and startups.
+          Whether you’re launching a new idea, expanding operations, or stabilizing cash flow, our microfinance options provide 
+          accessible funding to help you grow. With low entry requirements, flexible terms, and personalized guidance, we make 
+          it easier for you to achieve financial independence and long-term success.
+        </p>
+      </div>
+    </div>
+
+    <!-- Service 4 -->
+    <div class="service flex flex-col md:flex-row items-center gap-10 md:flex-row-reverse">
+      <img src="assets/img/lr.jpg" alt="Loan Restructuring" class="w-full md:w-1/2 rounded-lg shadow-2xl">
+      <div class="md:w-1/2 text-left">
+        <h3 class="text-3xl font-semibold mb-4 text-indigo-700">Loan Restructuring</h3>
+        <p class="text-gray-600 leading-relaxed">
+          Regain control of your finances with our flexible loan restructuring options. 
+          We work with you to adjust repayment terms, reduce financial pressure, and create a plan that 
+          fits your current situation. Whether you’re facing unexpected challenges or seeking a smoother 
+          path to repayment, our restructuring solutions are designed to ease your burden and help you stay on 
+          track toward financial stability.
+        </p>
+      </div>
+    </div>
+
+    <!-- Service 5 -->
+    <div class="service flex flex-col md:flex-row items-center gap-10">
+      <img src="assets/img/ia.jpg" alt="Investment Advisory" class="w-full md:w-1/2 rounded-lg shadow-2xl">
+      <div class="md:w-1/2 text-left">
+        <h3 class="text-3xl font-semibold mb-4 text-indigo-700">Investment Advisory</h3>
+        <p class="text-gray-600 leading-relaxed">
+          Unlock your financial potential with expert investment advisory services tailored to your goals. 
+          Whether you’re planning for retirement, growing your portfolio, or seeking new opportunities, 
+          our advisors provide personalized strategies designed to maximize returns while managing risk. 
+          With transparent guidance and ongoing support, we help you make informed decisions and build lasting 
+          wealth with confidence.
+        </p>
+      </div>
+    </div>
+
+    <!-- Service 6 -->
+    <div class="service flex flex-col md:flex-row items-center gap-10 md:flex-row-reverse">
+      <img src="assets/img/ias.jpg" alt="Insurance Assistance" class="w-full md:w-1/2 rounded-lg shadow-2xl">
+      <div class="md:w-1/2 text-left">
+        <h3 class="text-3xl font-semibold mb-4 text-indigo-700">Insurance Assistance</h3>
+        <p class="text-gray-600 leading-relaxed">
+          Safeguard what matters most with our tailored insurance assistance services. 
+          From health and life coverage to property and business protection, we connect you with 
+          trusted providers and plans that fit your unique needs. Our team helps you navigate options, 
+          understand benefits, and choose the right coverage so you can protect your assets, loved ones, 
+          and future with confidence.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- Testimonials Section -->
+<section id="testimonials" class="py-20 px-6 md:px-20 bg-gray-900 text-center">
+  <h2 class="text-4xl font-bold mb-12 text-white">What Our Clients Say</h2>
+
+  <!-- Scrolling Container -->
+  <div class="overflow-hidden relative">
+    <div class="flex animate-scroll space-x-6">
+      
+      <!-- Testimonial Cards (duplicated for seamless loop) -->
+      <div class="bg-white p-8 rounded-2xl shadow-2xl min-w-[300px] max-w-sm hover:scale-105 hover:shadow-3xl transform transition duration-300">
+        <p class="text-gray-700 italic mb-4">"Pirans made it so easy to choose a plan. The interface is modern and smooth!"</p>
+        <h4 class="font-semibold text-indigo-600">– Temitope Marvelous</h4>
+      </div>
+
+      <div class="bg-white p-8 rounded-2xl shadow-2xl min-w-[300px] max-w-sm hover:scale-105 hover:shadow-3xl transform transition duration-300">
+        <p class="text-gray-700 italic mb-4">"I love the transparency and design. The animations make the experience fun."</p>
+        <h4 class="font-semibold text-indigo-600">– Olamide Jonson</h4>
+      </div>
+
+      <div class="bg-white p-8 rounded-2xl shadow-2xl min-w-[300px] max-w-sm hover:scale-105 hover:shadow-3xl transform transition duration-300">
+        <p class="text-gray-700 italic mb-4">"Our company uses the enterprise plan and it’s been a game-changer!"</p>
+        <h4 class="font-semibold text-indigo-600">– Dorcas Isaac</h4>
+      </div>
+
+      <div class="bg-white p-8 rounded-2xl shadow-2xl min-w-[300px] max-w-sm hover:scale-105 hover:shadow-3xl transform transition duration-300">
+        <p class="text-gray-700 italic mb-4">"Customer support is top-notch! They truly care about our success."</p>
+        <h4 class="font-semibold text-indigo-600">– Samuel Ade</h4>
+      </div>
+
+      <!-- Duplicate for smooth looping -->
+      <div class="bg-white p-8 rounded-2xl shadow-2xl min-w-[300px] max-w-sm hover:scale-105 hover:shadow-3xl transform transition duration-300">
+        <p class="text-gray-700 italic mb-4">"Pirans made it so easy to choose a plan. The interface is modern and smooth!"</p>
+        <h4 class="font-semibold text-indigo-600">– Temitope Marvelous</h4>
+      </div>
+
+      <div class="bg-white p-8 rounded-2xl shadow-2xl min-w-[300px] max-w-sm hover:scale-105 hover:shadow-3xl transform transition duration-300">
+        <p class="text-gray-700 italic mb-4">"I love the transparency and design. The animations make the experience fun."</p>
+        <h4 class="font-semibold text-indigo-600">– Olamide Jonson</h4>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
 <!-- Contact Section -->
 <section id="contact" class="py-20 px-6 md:px-20 bg-gray-800 text-center">
@@ -228,7 +327,7 @@
         <i class="fas fa-map-marker-alt"></i>
       </div>
       <h3 class="text-xl font-semibold mb-2">Address</h3>
-      <p class="text-gray-400">Block 3 oniru close, Lagos, Nigeria</p>
+      <p class="text-gray-400">St. Pirans Avenue, Jos, Plateau State, Nigeria.</p>
     </div>
 
     <!-- Opening Hours Card -->
@@ -282,7 +381,7 @@
       </p>
       <p class="flex items-center space-x-2 mb-2">
         <i class="fas fa-map-marker-alt text-indigo-500"></i>
-        <span>Block 3 oniru close, Lagos, Nigeria</span>
+        <span>St. Pirans Avenue, Jos, Plateau State, Nigeria.</span>
       </p>
     </div>
 
