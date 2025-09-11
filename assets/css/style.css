@@ -43,13 +43,42 @@ footer{
     display: flex;
     width: max-content;
     animation: scroll 25s linear infinite;
-    }
-.service {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: all 0.8s ease-out;
 }
-.service.show {
-    opacity: 1;
-    transform: translateY(0);
+
+@keyframes fadeSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}  
+/*stagger */
+section:not(#hero):not(footer) h2,
+section:not(#hero):not(footer) h3,
+section:not(#hero):not(footer) p,
+section:not(#hero):not(footer) a,
+section:not(#hero):not(footer) img,
+section:not(#hero):not(footer) button {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeSlideUp 0.8s ease-out both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 25%;
+}
+/* Stagger delays */
+section:not(#hero):not(footer) h2,
+section:not(#hero):not(footer) h3 {
+    animation-delay: 0.4s;
+}
+section:not(#hero):not(footer) p,
+section:not(#hero):not(footer) input,
+section:not(#hero):not(footer) textarea {
+    animation-delay: 0.7s;
+}
+section:not(#hero):not(footer) a,
+section:not(#hero):not(footer) button {
+    animation-delay: 0.9s;
 }

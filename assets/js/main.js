@@ -68,23 +68,3 @@ document.addEventListener("DOMContentLoaded", () => {
   
     setInterval(autoScroll, 3000); // scroll every 3s
   });  
-
-  // scroll reveal 
-  document.addEventListener("DOMContentLoaded", () => {
-    const services = document.querySelectorAll(".service");
-  
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("show");
-          // Uncomment if you want animation only once:
-          // observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.2 });
-  
-    services.forEach(service => {
-      observer.observe(service);
-    });
-  });
-  
