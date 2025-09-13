@@ -31,18 +31,54 @@ i{
 #about .text-4xl{
     color: var(--black);
 }
+#testimonials{
+    background-color: var(--text-color);
+}
+.testimonial-card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+    min-width: 300px;  /* slightly bigger */
+    max-width: 320px;
+    flex-shrink: 0;
+    text-align: center;
+    margin: 0 0.5rem; /* extra gap so no cut-off */
+  }
+  .testimonial-card img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+    border: 3px solid #fff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  .testimonial-card p {
+    color: #555;
+    font-style: italic;
+    margin-bottom: 1rem;
+  }
+  .testimonial-card h4 {
+    font-weight: 600;
+    color: #333;
+  }
+
+.card{
+    background-color: indigo;
+}
 footer{
     background-color: var(--black);
 }
 /* Animation  */
 @keyframes scroll {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
-    }
-    .animate-scroll {
-    display: flex;
-    width: max-content;
-    animation: scroll 25s linear infinite;
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.animate-scroll {
+  display: flex;
+  animation: scroll 45s linear infinite;
+  width: max-content;
+  padding-bottom: 1rem; /* extra bottom space */
 }
 
 @keyframes fadeSlideUp {
