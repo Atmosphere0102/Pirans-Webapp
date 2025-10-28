@@ -9,7 +9,7 @@ html {
 }
 :root {
     --text-color: #fff;
-    --background-color: gray;
+    --background-color: rgb(80, 43, 43);
     --hover-text: indigo;
     --black:#000;
 }
